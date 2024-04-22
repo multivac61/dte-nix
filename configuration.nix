@@ -3,14 +3,25 @@
   imports = [
     ./disk-config.nix
     ./shared.nix
+    ./hardware-configuration.nix
   ];
 
-  boot.loader.grub = {
-    # no need to set devices, disko will add all devices that have a EF02 partition to the list already
-    # devices = [ ];
-    efiSupport = true;
-    efiInstallAsRemovable = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+    extraPackages = with pkgs; [
+      intel-compute-runtime
+      vaapiVdpau
+    ];
+    extraPackages32 = with pkgs.pkgsi686Linux; [
+      intel-media-driver
+      intel-vaapi-driver
+      vaapiIntel
+    ];
   };
+
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
   networking.hostName = "joip";
   users = {
