@@ -1,15 +1,21 @@
+# A trivial disk configuration with single root partition taking whole disk space.
 {
   disko.devices = {
     disk = {
-      vdb = {
+      main = {
+        # TODO: Don't hardcode (this file is used by multiple systems)
         device = "/dev/disk/by-id/nvme-eui.002538db21a8a97f";
         type = "disk";
         content = {
           type = "gpt";
           partitions = {
+            boot = {
+              size = "1M";
+              type = "EF02"; # for grub MBR
+            };
             ESP = {
+              size = "512M";
               type = "EF00";
-              size = "500M";
               content = {
                 type = "filesystem";
                 format = "vfat";

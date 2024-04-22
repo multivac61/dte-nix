@@ -8,6 +8,9 @@
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
+    devices = [ "/dev/nvme0n1" ];
+    efiSupport = true;
+    efiInstallAsRemovable = true;
   };
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
   networking.hostName = "joip";
@@ -25,17 +28,6 @@
       enable = true;
       displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
-    };
-    avahi = {
-      openFirewall = true;
-      nssmdns = true; # Allows software to use Avahi to resolve.
-      enable = true;
-      publish = {
-        userServices = true;
-        enable = true;
-        addresses = true;
-        workstation = true;
-      };
     };
   };
   users.users.root.openssh.authorizedKeys.keys = [
