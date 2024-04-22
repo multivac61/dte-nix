@@ -7,9 +7,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { nixpkgs, nixos-hardware, disko, ... }: {
+  outputs = { nixpkgs, nixos-hardware, disko, ... }@inputs: {
     nixosConfigurations.joip = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
       modules = [
         nixos-hardware.nixosModules.common-cpu-intel
         nixos-hardware.nixosModules.common-gpu-intel
