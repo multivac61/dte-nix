@@ -6,9 +6,6 @@
   ];
 
   boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    devices = [ "/dev/nvme0n1" ];
     efiSupport = true;
     efiInstallAsRemovable = true;
   };

@@ -15,7 +15,7 @@
         nixos-hardware.nixosModules.common-cpu-intel
         nixos-hardware.nixosModules.common-gpu-intel
         nixos-hardware.nixosModules.common-pc-ssd
-        disko.nixosModules.default
+        disko.nixosModules.disko
         ./configuration.nix
       ];
     };
