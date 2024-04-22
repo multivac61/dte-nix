@@ -8,7 +8,7 @@
     };
   };
   outputs = { nixpkgs, nixos-hardware, disko, ... }: {
-    nixosConfigurations.myComputer = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.joip = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         nixos-hardware.nixosModules.common-cpu-intel
