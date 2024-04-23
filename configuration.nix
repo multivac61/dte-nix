@@ -8,21 +8,8 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  hardware.opengl = {
-    enable = true;
-    driSupport32Bit = true;
-    extraPackages = with pkgs; [
-      intel-compute-runtime
-      vaapiVdpau
-    ];
-    extraPackages32 = with pkgs.pkgsi686Linux; [
-      intel-media-driver
-      intel-vaapi-driver
-      vaapiIntel
-    ];
-  };
 
-  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+  # boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
   networking.hostName = "joip";
   users = {
     mutableUsers = false;
