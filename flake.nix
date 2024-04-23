@@ -12,9 +12,7 @@
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
-        nixos-hardware.nixosModules.common-cpu-intel
-        nixos-hardware.nixosModules.common-gpu-intel
-        nixos-hardware.nixosModules.common-pc-ssd
+        nixos-hardware.nixosModules.intel-nuc-8i7beh
         disko.nixosModules.disko
         ./configuration.nix
       ];
