@@ -36,6 +36,7 @@
     # Your list of packages here...
     git
     gh
+    neofetch
     # other packages...
   ];
 
