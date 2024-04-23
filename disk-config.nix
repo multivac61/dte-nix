@@ -1,10 +1,9 @@
-# A trivial disk configuration with single root partition taking whole disk space.
+# hybdrix.nix - https://github.com/nix-community/disko/blob/master/example/hybrid.nix
 {
   disko.devices = {
     disk = {
       main = {
-        # TODO: Don't hardcode (this file is used by multiple systems)
-        device = "/dev/disk/by-id/nvme-eui.002538db21a8a97f";
+        device = "/dev/disk/by-id/nvme-INTEL_SSDPEKNW512G8_PHNH938308PX512A";
         type = "disk";
         content = {
           type = "gpt";
