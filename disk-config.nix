@@ -1,4 +1,4 @@
-# hybdrix.nix - https://github.com/nix-community/disko/blob/master/example/hybrid.nix
+# https://github.com/nix-community/disko/blob/master/example/hybrid.nix
 {
   disko.devices = {
     disk = {
