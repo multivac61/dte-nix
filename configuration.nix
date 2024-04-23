@@ -10,6 +10,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   services.postgresql.enable = true;
+  services.postgresql.ensureDatabases = [ "dte" ];
+  services.postgresql.ensureUsers = [{ name = "dte"; ensureDBOwnership = true; }];
   services.postgresql.package = pkgs.postgresql_14;
   services.postgresql.settings = {
     max_connections = "300";
@@ -17,11 +19,16 @@
   };
   services.postgresqlBackup.enable = true;
 
-  networking.hostName = "joip";
+  networking.hostName = "dte";
   users = {
     mutableUsers = false;
-    users.root.hashedPassword = "$y$j9T$0TYJhZQBzM8XWeQt5zrGT1$d4hxYKpJeWV13q48VpyQp5gPGZZAsru8aX2i1O2cv7D";
+    users.dte = {
+      isNormalUser = true;
+      description = "dte";
+      extraGroups = [ "networkmanager" "wheel" "docker" ];
+    };
   };
+
   nix.settings.experimental-features = "nix-command flakes";
   services = {
     openssh = {
