@@ -6,8 +6,7 @@
     ./hardware-configuration.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
 
   services.postgresql.enable = true;
   services.postgresql.ensureDatabases = [ "dte" ];
