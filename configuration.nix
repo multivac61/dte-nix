@@ -18,6 +18,7 @@
     shared_buffers = "80MB";
   };
   services.postgresqlBackup.enable = true;
+  services.tailscale.enable = true;
   services.nginx.enable = true;
   services.nginx.virtualHosts."nylon" = {
     root = ./homepage;
