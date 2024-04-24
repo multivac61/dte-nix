@@ -27,7 +27,7 @@
     users.dte = {
       isNormalUser = true;
       description = "dte";
-      initialHashedPassword = "$y$j9T$c4cYEAyzVw.DXPxkuNbCe0$r7LZEaVciWNcKG75DAyD1v2CFOhCxOtbzy0oiAJOGf6";
+      initialHashedPassword = "$y$j9T$VVDQbZfb/pSmWvZ11nOYy1$fmFj4b2x5ejAQ9W/fiGCqL0SuRgDXUZx5e/kvfhv9Z9";
       extraGroups = [ "networkmanager" "wheel" "docker" ];
     };
   };
