@@ -17,8 +17,9 @@
     shared_buffers = "80MB";
   };
   services.postgresqlBackup.enable = true;
-  services.vector.enable = true;
-  services.vmagent.enable = true;
+  services.nginx.enable = true;
+  # services.vector.enable = true;
+  # services.vmagent.enable = true;
 
   networking.hostName = "nylon";
   users = {
