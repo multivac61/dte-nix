@@ -19,7 +19,7 @@
   };
   services.postgresqlBackup.enable = true;
   services.nginx.enable = true;
-  services.nginx.virtualHosts."foo.lan" = {
+  services.nginx.virtualHosts."nylon" = {
     root = ./homepage;
   };
   # services.vector.enable = true;
