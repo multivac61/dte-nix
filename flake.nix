@@ -8,11 +8,10 @@
     };
   };
   outputs = { nixpkgs, nixos-hardware, disko, ... }@inputs: {
-    nixosConfigurations.kroli = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.yohanna = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
-        nixos-hardware.nixosModules.intel-nuc-8i7beh
         disko.nixosModules.disko
         ./configuration.nix
       ];
