@@ -8,7 +8,7 @@
     };
   };
   outputs = { nixpkgs, nixos-hardware, disko, ... }@inputs: {
-    nixosConfigurations.yohanna = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nylon = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
