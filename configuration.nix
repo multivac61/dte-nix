@@ -18,7 +18,7 @@
     shared_buffers = "80MB";
   };
   services.postgresqlBackup.enable = true;
-  services.nginx.enable = true;
+  # services.nginx.enable = true;
   # services.vector.enable = true;
   # services.vmagent.enable = true;
 
