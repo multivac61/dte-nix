@@ -19,7 +19,7 @@
   };
   services.postgresqlBackup.enable = true;
 
-  networking.hostName = "nylon";
+  networking.hostName = "gugusar";
   users = {
     mutableUsers = false;
     users.dte = {
