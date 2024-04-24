@@ -18,7 +18,10 @@
     shared_buffers = "80MB";
   };
   services.postgresqlBackup.enable = true;
-  # services.nginx.enable = true;
+  services.nginx.enable = true;
+  services.nginx.virtualHosts."foo.lan" = {
+    root = ./homepage;
+  };
   # services.vector.enable = true;
   # services.vmagent.enable = true;
 
