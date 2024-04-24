@@ -30,6 +30,12 @@
       initialHashedPassword = "$y$j9T$VVDQbZfb/pSmWvZ11nOYy1$fmFj4b2x5ejAQ9W/fiGCqL0SuRgDXUZx5e/kvfhv9Z9";
       extraGroups = [ "networkmanager" "wheel" "docker" ];
     };
+    users.oli = {
+      isNormalUser = true;
+      description = "oli";
+      initialHashedPassword = "$y$j9T$VVDQbZfb/pSmWvZ11nOYy1$fmFj4b2x5ejAQ9W/fiGCqL0SuRgDXUZx5e/kvfhv9Z9";
+      extraGroups = [ "networkmanager" "wheel" "docker" ];
+    };
   };
 
   nix.settings.experimental-features = "nix-command flakes";
