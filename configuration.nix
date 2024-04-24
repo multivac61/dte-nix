@@ -19,7 +19,7 @@
   };
   services.postgresqlBackup.enable = true;
 
-  networking.hostName = "dte";
+  networking.hostName = "kroli";
   users = {
     mutableUsers = false;
     users.dte = {
@@ -69,6 +69,7 @@
     gh
     neofetch
     cachix
+    cmatrix
     # other packages...
   ];
 

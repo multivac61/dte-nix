@@ -8,7 +8,7 @@
     };
   };
   outputs = { nixpkgs, nixos-hardware, disko, ... }@inputs: {
-    nixosConfigurations.joip = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.kroli = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
