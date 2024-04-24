@@ -76,9 +76,7 @@
     # Your list of packages here...
     git
     gh
-    neofetch
     cachix
-    cmatrix
     # other packages...
   ];
 
