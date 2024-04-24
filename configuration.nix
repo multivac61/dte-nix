@@ -25,6 +25,7 @@
     users.dte = {
       isNormalUser = true;
       description = "dte";
+      initialHashedPassword = "$y$j9T$c4cYEAyzVw.DXPxkuNbCe0$r7LZEaVciWNcKG75DAyD1v2CFOhCxOtbzy0oiAJOGf6";
       extraGroups = [ "networkmanager" "wheel" "docker" ];
     };
   };
@@ -47,6 +48,7 @@
   ];
 
   nix.settings = {
+    trusted-users = [ "root" "@wheel" "dte" ];
     substituters = [
       "https://genki.cachix.org" # In the future this could be DTE's own cache
       "https://nix-community.cachix.org"
