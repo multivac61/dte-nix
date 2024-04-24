@@ -3,7 +3,7 @@
   disko.devices = {
     disk = {
       main = {
-        device = "/dev/sda";
+        device = "/dev/disk/by-id/ata-SanDisk_SSD_U100_124GB_122172301045";
         type = "disk";
         content = {
           type = "gpt";
